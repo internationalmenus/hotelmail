@@ -44,6 +44,10 @@ app.get("/delivered", function(req, res) {
   res.sendFile(path.join(__dirname, "delivered.html"));
 });
 
+app.get("/all", function(req, res) {
+  res.sendFile(path.join(__dirname, "all.html"));
+});
+
 app.get("/api/mails", function(req, res) {
   
  return res.json(mails.sort(function(a, b) {

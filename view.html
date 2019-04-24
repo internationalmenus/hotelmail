@@ -34,6 +34,9 @@
                 <h6><strong>Group Name:</strong> <span id="group"> </span></h6>
                 <h6><strong>Storage Location:</strong> <span id="detail"> </span></h6>
                 <h6><strong>Number of Items:</strong> <span id="bundle"> </span></h6>
+                <h6><strong>Date Arrived:</strong> <span id="date"> </span></h6>
+                <h6><strong>Received By:</strong> <span id="employee"> </span></h6>
+
               </div>
           </div>
         </div>
@@ -68,6 +71,8 @@
           $("#group").text(data.group);
           $("#detail").text(data.detail);
           $("#bundle").text(data.bundle);
+          $("#date").text(data.date);
+          $("#employee").text(data.employee);
         }
         else {
           $("#trackingNumber").text("Not Delivered");
