@@ -13,46 +13,34 @@
 
 <body>
 
-    <div class="row" class="container-fluid">
+  <div class="row" class="container-fluid">
+        
+    <div class="col-sm-12">
 
-      <div class="col-sm-12">
-
-        <div class="card m-4">
-          <div class="card-header">
-            <h4>Check Hotel Mail</h4>
-          </div>
-          <div class="card-body">
-            <input type="text" id="mail-search" placeholder="Enter Tracking Number" class="form-control">
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-lg btn-block m-1 p-2" id="search-btn"><span class="fa fa-search"></span> Search</button>
+        <div class="jumbotron jumbotron-fluid p-4">
+            <div class="container-fluid m-2">
+                <h4 class="mb-4">Check Hotel Mail</h4>
+                <input type="text" id="mail-search" placeholder="Enter Tracking Number" class="form-control form-control-lg">
+                <br>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block m-1 mb-4 p-2" id="search-btn"><span class="fa fa-search"></span> Search</button>
+                </div>
+                <h6 id="trackingNumber" class="text-center m-1"></h6>
+                <div id="stats" class="mb-4">
+                  <h6><strong>Guest:</strong> <span id="lastName"> </span></h6>
+                  <h6><strong>Location:</strong> <span id="detail"> </span></h6>
+                  <h6><strong>Group:</strong> <span id="group"> </span></h6>
+                  <h6><strong>Items:</strong> <span id="bundle"> </span></h6>
+                </div>
+                <h4 class="mb-4">Check Delivery Status</h4>
+                <div>
+                    <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://tools.usps.com/go/TrackConfirmAction_input" target="_blank">USPS® Tracking</a></button>
+                    <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://www.ups.com/track?loc=en_US&requester=ST/" target="_blank">UPS® Tracking</a></button>
+                    <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://www.fedex.com/apps/fedextrack/?action=track" target="_blank">FedEx® Tracking</a></button>
+                    <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://www.logistics.dhl/us-en/home/tracking.html" target="_blank">DHL® Tracking</a></button>
+                  </div>
             </div>
           </div>
-          <div class="card-body">
-            <h6 id="trackingNumber" class="text-center m-1"></h6>
-              <div id="stats">
-                <h6><strong>Guest:</strong> <span id="lastName"> </span></h6>
-                <h6><strong>Location:</strong> <span id="detail"> </span></h6>
-                <h6><strong>Group:</strong> <span id="group"> </span></h6>
-                <h6><strong>Items:</strong> <span id="bundle"> </span></h6>
-              </div>
-            </div>
-        </div>
-
-
-        <div class="card m-4">
-          <div class="card-header">
-            <h4>Check Delivery Status</h4>
-          </div>
-          <div class="card-body text-center w-100">
-            <div>
-              <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://tools.usps.com/go/TrackConfirmAction_input" target="_blank">USPS® Tracking</a></button>
-              <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://www.ups.com/track?loc=en_US&requester=ST/" target="_blank">UPS® Tracking</a></button>
-              <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://www.fedex.com/apps/fedextrack/?action=track" target="_blank">FedEx® Tracking</a></button>
-              <button type="button" class="btn btn-lg btn-outline-secondary btn-block m-1 p-2"><a href="https://www.logistics.dhl/us-en/home/tracking.html" target="_blank">DHL® Tracking</a></button>
-            </div>
-          </div>
-        </div>
 
 
 
