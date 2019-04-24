@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hotel Mail - Add</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Hotel Mail</title>
 
 </head>
 <body>
@@ -23,29 +25,28 @@
             <form method="POST" role="form">
 
               <div class="form-group">
-              <label><strong>Tracking Number on Shipping Label</strong><br>Ex: 1A 404 2B9 05 5544 0011</label>
-                <input type="text" class="form-control" placeholder="Tracking Number" id="trackingNumber">
+              <label><strong>Tracking Number on Label</strong><br>Ex: 1A 404 2B9 05 5544 0011</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Tracking Number" id="trackingNumber">
               </div>
 
               <div class="form-group">
-                  <label><strong>Last Name on Shipping Label</strong><br>Ex: Lopez</label>
-                <input type="text" class="form-control" placeholder="Last Name" id="lastName">
+                  <label><strong>Last Name on Label</strong><br>Ex: Lopez</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Last Name" id="lastName">
               </div>
 
+              <div class="form-group">
+                  <label><strong>Group Name on Label (If Available)</strong><br>Ex: Green Energy Association</label>
+                  <input type="text" class="form-control form-control-lg" placeholder="Group Name" id="group">
+              </div>
 
               <div class="form-group">
                   <label><strong>Storage Location of Mail</strong><br>Ex: Bell Closet</label>
-                <input type="text" class="form-control" placeholder="Location" id="detail">
-              </div>
-              
-              <div class="form-group">
-                  <label><strong>Name of Group on Shipping Label</strong><br>Ex: NY Law Group</label>
-                  <input type="text" class="form-control" placeholder="Group Name (If Applicable)" id="group">
+                <input type="text" class="form-control form-control-lg" placeholder="Location" id="detail">
               </div>
 
               <div class="form-group">
                   <label><strong>Number of Items Together</strong><br>Ex: 7</label>
-                  <input type="text" class="form-control" placeholder="Total Items" id="bundle">
+                  <input type="text" class="form-control form-control-lg" placeholder="Total Items" id="bundle">
               </div>
 
 

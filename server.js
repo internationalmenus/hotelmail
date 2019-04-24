@@ -8,21 +8,21 @@ app.use(express.json());
 var mails = [
   {
     lastName: "lastname1",
+    group: "groupName1",
     detail: "Example1",
     bundle: "1",
-    group: "groupName1",
-    trackingNum: "0000000000001",
-    trackingNumber: "0000000000001",
+    trackingNum: "01",
+    trackingNumber: "01",
     id: Date.now(),
     date: Date()
   },
   {
     lastName: "lastname2",
+    group: "groupName2",
     detail: "Example2",
     bundle: "2",
-    group: "groupName2",
-    trackingNum: "0000000000002",
-    trackingNumber: "0000000000002",
+    trackingNum: "02",
+    trackingNumber: "02",
     id: Date.now(),
     date: Date()
   },
