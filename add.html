@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Mail - Add</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-12">
+
+        <div class="card m-4">
+          <div class="card-header">
+            <h4>Add Mail</h4>
+          </div>
+          <div class="card-body">
+            <form method="POST" role="form">
+
+              <div class="form-group">
+              <label>Tracking Number on Shipping Label<br>Ex: 1A 404 2B9 05 5544 0011</label>
+                <input type="text" class="form-control" placeholder="Enter Tracking Number" id="trackingNumber">
+              </div>
+
+              <div class="form-group">
+                  <label>Last Name on Label<br>Ex: Lopez</label>
+                <input type="text" class="form-control" placeholder="Last Name Only" id="lastName">
+              </div>
+
+
+              <div class="form-group">
+                  <label> Where To Find The Mail<br>Ex: Bell Closet</label>
+                <input type="text" class="form-control" placeholder="Location of Mail" id="detail">
+              </div>
+              
+              <div class="form-group">
+                  <label>Name of Group Staying At Hotel<br>Ex: NY Law Group</label>
+                  <input type="text" class="form-control" placeholder="Group Name (If Applicable)" id="group">
+              </div>
+
+              <div class="form-group">
+                  <label>Number of Items Together<br>Ex: 7</label>
+                  <input type="text" class="form-control" placeholder="Total Item Number" id="bundle">
+              </div>
+
+
+            </form>
+            <br>
+            <div class="text-center w-100">
+              <button type="submit" class="btn btn-primary btn-lg btn-block m-1 p-2" id="add-btn"><span class="fa fa-plus"></span> Add Mail</button><br>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+      var newCharacter = {
+        lastName: $("#lastName").val().trim(),
+        detail: $("#detail").val().trim(),
+        bundle: $("#bundle").val().trim(),
+        group: $("#group").val().trim(),
+        trackingNumber: $("#trackingNumber").val().trim(),
+        id: Date.now(),
+        date: Date()
+      };
+
+      $.post("/api/mails", newCharacter)
+        .then(function(data) {document.location.reload(true)});
+
+    });
+  </script>
+
+</body>
+</html>
