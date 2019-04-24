@@ -7,10 +7,12 @@ app.use(express.json());
 
 var mails = [
   {
-    lastName: "lastname1",
+    lastName: "lastName1",
     group: "groupName1",
     detail: "Example1",
     bundle: "1",
+    employee: "firstName1",
+    delivered: "10",
     trackingNum: "01",
     trackingNumber: "01",
     id: Date.now(),
@@ -21,6 +23,8 @@ var mails = [
     group: "groupName2",
     detail: "Example2",
     bundle: "2",
+    employee: "firstName2",
+    delivered: "20",
     trackingNum: "02",
     trackingNumber: "02",
     id: Date.now(),
@@ -34,6 +38,10 @@ app.get("/", function(req, res) {
 
 app.get("/add", function(req, res) {
   res.sendFile(path.join(__dirname, "add.html"));
+});
+
+app.get("/delivered", function(req, res) {
+  res.sendFile(path.join(__dirname, "delivered.html"));
 });
 
 app.get("/api/mails", function(req, res) {
@@ -60,11 +68,20 @@ app.get("/api/mails/:mail", function(req, res) {
 
 
 app.post("/api/mails", function(req, res) {
-  var newmail = req.body;
-  newmail.trackingNum = newmail.trackingNumber.replace(/\s+/g, "").toLowerCase();
-  console.log(newmail);
-  mails.push(newmail);
-  res.json(newmail);
+  var addmail = req.body;
+  addmail.trackingNum = addmail.trackingNumber.replace(/\s+/g, "").toLowerCase();
+  console.log(addmail);
+  mails.push(addmail);
+  res.json(addmail);
+
+});
+
+app.post("/api/mails", function(req, res) {
+  var delivermail = req.body;
+  delivermail.trackingNum = delivermail.trackingNumber.replace(/\s+/g, "").toLowerCase();
+  console.log(delivermail);
+  mails.push(delivermail);
+  res.json(delivermail);
 
 });
 
