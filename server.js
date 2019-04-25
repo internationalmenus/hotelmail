@@ -48,6 +48,10 @@ app.get("/all", function(req, res) {
   res.sendFile(path.join(__dirname, "all.html"));
 });
 
+app.get("/admin", function(req, res) {
+  res.sendFile(path.join(__dirname, "admin.html"));
+});
+
 app.get("/api/mails", function(req, res) {
   
  return res.json(mails.sort(function(a, b) {
