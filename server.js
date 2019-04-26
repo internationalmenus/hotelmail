@@ -52,6 +52,18 @@ app.get("/admin", function(req, res) {
   res.sendFile(path.join(__dirname, "admin.html"));
 });
 
+app.get("/validation", function(req, res) {
+  res.sendFile(path.join(__dirname, "validation.html"));
+});
+
+app.get("/employee", function(req, res) {
+  res.sendFile(path.join(__dirname, "employee.html"));
+});
+
+app.get("/password", function(req, res) {
+  res.sendFile(path.join(__dirname, "password.html"));
+});
+
 app.get("/api/mails", function(req, res) {
   
  return res.json(mails.sort(function(a, b) {
